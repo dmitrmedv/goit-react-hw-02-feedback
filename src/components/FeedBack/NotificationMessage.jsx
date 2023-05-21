@@ -1,0 +1,1 @@
+export default function NotificationMessage(){"There is no feedback"}
