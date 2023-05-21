@@ -1,1 +1,3 @@
-export default function NotificationMessage(){"There is no feedback"}
+export default function NotificationMessage() {
+  return 'There is no feedback';
+}
