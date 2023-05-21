@@ -1,5 +1,10 @@
 import { FeedBack } from './FeedBack/FeedBack';
+import { FeedBackSection } from './FeedBack/FeedBack.styled';
 
 export const App = () => {
-  return <FeedBack />;
+  return (
+    <FeedBackSection>
+      <FeedBack />
+    </FeedBackSection>
+  );
 };
