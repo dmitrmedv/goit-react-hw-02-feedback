@@ -10,7 +10,7 @@ export class FeedBack extends Component {
   };
 
   addFeedBack = event => {
-    let currentValue = event.currentTarget.textContent.toLowerCase();
+    let currentValue = event.currentTarget.dataset.action;
     this.setState(prevState => {
       return {
         [currentValue]: prevState[currentValue] + 1,
@@ -33,13 +33,13 @@ export class FeedBack extends Component {
     return (
       <>
         <h2>Please leave feedback</h2>
-        <button type="button" onClick={addFeedBack}>
+        <button type="button" data-action="good" onClick={addFeedBack}>
           Good
         </button>
-        <button type="button" onClick={addFeedBack}>
+        <button type="button" data-action="neutral" onClick={addFeedBack}>
           Neutral
         </button>
-        <button type="button" onClick={addFeedBack}>
+        <button type="button" data-action="bad" onClick={addFeedBack}>
           Bad
         </button>
         <h2>Statistics</h2>
