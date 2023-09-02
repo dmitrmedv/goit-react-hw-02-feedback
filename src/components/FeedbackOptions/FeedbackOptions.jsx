@@ -1,5 +1,6 @@
 import css from './FeedbackOptions.module.css';
 import setData from '../../utils/utils';
+// import PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const buttonsNames = setData(options);
@@ -11,7 +12,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
             <button
               key={buttonItem}
               type="button"
-              className="btn"
+              className={css.btn}
               data-name={buttonItem}
               onClick={onLeaveFeedback}
             >
@@ -20,7 +21,16 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           );
         })}
       </div>
-      <h2>Statistics</h2>
+      <h2 className={css.statisticTitle}>Statistics</h2>
     </>
   );
 };
+
+// FeedbackOptions.PropTypes = {
+//   options: PropTypes.shape({
+//     good: PropTypes.number,
+//     neutral: PropTypes.number,
+//     bad: PropTypes.number,
+//   }),
+//   onLeaveFeedback: PropTypes.func,
+// };

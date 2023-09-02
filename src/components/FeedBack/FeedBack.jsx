@@ -1,6 +1,6 @@
-import { FeedbackOptions } from 'components/Buttons/FeedbackOptions';
+import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { NotificationMessage } from 'components/NotificationMessage/NotificationMessage';
-import { Section } from 'components/SectionTitle/Section';
+import { Section } from 'components/Section/Section';
 import { Statistics } from 'components/Statistics/Statistics';
 import { Component } from 'react';
 
@@ -44,7 +44,7 @@ class FeedBack extends Component {
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
             options={this.state}
-            onLeaveFeedback={this.onLeaveFeedback}
+            onLeaveFeedback={onLeaveFeedback}
           />
           {countTotalFeedback() ? (
             <Statistics
@@ -53,7 +53,6 @@ class FeedBack extends Component {
               bad={bad}
               total={countTotalFeedback}
               positivePercentage={countPositiveFeedbackPercentage}
-              onLeaveFeedback={onLeaveFeedback}
             />
           ) : (
             <NotificationMessage message="There is no feedback" />

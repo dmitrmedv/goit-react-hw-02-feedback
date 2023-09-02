@@ -1,6 +1,7 @@
 .buttons {
   display: flex;
   gap: 10px;
+  margin-bottom: 16px;
 }
 
 .btn {
@@ -9,4 +10,8 @@
 
 .btn::first-letter {
   text-transform: uppercase;
+}
+
+.statisticTitle {
+  margin-bottom: 16px;
 }
